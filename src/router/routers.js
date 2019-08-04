@@ -2,7 +2,7 @@ import Main from '@/components/main'
 import parentView from '@/components/parent-view'
 
 /**
- * iview-admin中meta除了原生参数外可配置的参数:
+ * iDev-admin中meta除了原生参数外可配置的参数:
  * meta: {
  *  title: { String|Number|Function }
  *         显示在侧边栏、面包屑和标签栏的文字
@@ -51,12 +51,59 @@ export default [
     ]
   },
   {
+    path: '/systemMaintenance',
+    name: 'systemMaintenance',
+    meta: {
+      icon: 'ios-hammer',
+      title: '系统工具'
+    },
+    component: Main,
+    children: [
+      {
+        path: 'organization',
+        name: 'organization',
+        meta: {
+          icon: 'md-home',
+          title: '组织机构'
+        },
+        component: () => import('@/view/systemMaintenance/organization/organization.vue')
+      },
+      {
+        path: 'systemMenu',
+        name: 'systemMenu',
+        meta: {
+          icon: 'md-menu',
+          title: '系统菜单'
+        },
+        component: () => import('@/view/systemMaintenance/system-menu/system-menu.vue')
+      },
+      {
+        path: 'rolePermission',
+        name: 'rolePermission',
+        meta: {
+          icon: 'md-paper-plane',
+          title: '角色权限'
+        },
+        component: () => import('@/view/systemMaintenance/role-permission/role-permission.vue')
+      },
+      {
+        path: 'userManager',
+        name: 'userManager',
+        meta: {
+          icon: 'md-people',
+          title: '用户管理'
+        },
+        component: () => import('@/view/systemMaintenance/user-manager/user-manager.vue')
+      }
+    ]
+  },
+  {
     path: '',
     name: 'doc',
     meta: {
-      title: '文档',
-      href: 'https://lison16.github.io/iview-admin-doc/#/',
-      icon: 'ios-book'
+      title: 'GitHub',
+      href: 'https://github.com/AlicusEmma',
+      icon: 'logo-octocat'
     }
   },
   {
@@ -394,7 +441,7 @@ export default [
         path: 'level_2_2',
         name: 'level_2_2',
         meta: {
-          access: ['super_admin'],
+          access: ['idev_admin'],
           icon: 'md-funnel',
           showAlways: true,
           title: '二级-2'

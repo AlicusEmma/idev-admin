@@ -152,7 +152,7 @@ export const getNewTagList = (list, newRoute) => {
 }
 
 /**
- * @param {*} access 用户权限数组，如 ['super_admin', 'admin']
+ * @param {*} access 用户权限数组，如 ['idev_admin', 'admin']
  * @param {*} route 路由列表
  */
 const hasAccess = (access, route) => {
