@@ -66,7 +66,7 @@ export default [
           icon: 'md-home',
           title: '组织机构'
         },
-        component: () => import('@/view/systemMaintenance/organization/organization.vue')
+        component: () => import('@/view/system-maint/organization/organization.vue')
       },
       {
         path: 'systemMenu',
@@ -75,7 +75,7 @@ export default [
           icon: 'md-menu',
           title: '系统菜单'
         },
-        component: () => import('@/view/systemMaintenance/system-menu/system-menu.vue')
+        component: () => import('@/view/system-maint/system-menu/system-menu.vue')
       },
       {
         path: 'rolePermission',
@@ -84,7 +84,7 @@ export default [
           icon: 'md-paper-plane',
           title: '角色权限'
         },
-        component: () => import('@/view/systemMaintenance/role-permission/role-permission.vue')
+        component: () => import('@/view/system-maint/role-permission/role-permission.vue')
       },
       {
         path: 'userManager',
@@ -93,7 +93,7 @@ export default [
           icon: 'md-people',
           title: '用户管理'
         },
-        component: () => import('@/view/systemMaintenance/user-manager/user-manager.vue')
+        component: () => import('@/view/system-maint/user-manager/user-manager.vue')
       }
     ]
   },

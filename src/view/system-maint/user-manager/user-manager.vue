@@ -11,7 +11,7 @@
 import Tables from '_c/tables'
 import { getTableData } from '@/api/data'
 export default {
-  name: 'tables_page',
+  name: 'userManager',
   components: {
     Tables
   },
@@ -59,9 +59,11 @@ export default {
     }
   },
   mounted () {
+    //TODO:跨域请求
     getTableData().then(res => {
     //   console.log('================' + res.data);
-      this.tableData = res.data
+     var resJSONData = {"message":"success","data":[{"createTime":"2019.08.04","name":"Alicus","email":"alicus890824@163.com"},{"createTime":"2019.08.24","name":"Kobe","email":"alicus890824@foxmail.com"}]};
+      this.tableData = resJSONData.data;
     })
   }
 }
